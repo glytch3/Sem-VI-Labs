@@ -1,0 +1,26 @@
+<!-- Write a JavaScript that inputs a telephone number as a string in the form (555) 
+555-5555. The script should use String method split to extract the area code as a 
+token, the first three digits of the phone number as a token and the last four digits 
+of the phone number as a token. Display the area code in one text field and the 
+seven-digit phone number in another text field. -->
+
+<html>
+    <head>
+        <script src="../Q3/index.js"></script>
+        <link rel="stylesheet" type="text/css" href="/Q3/index.css">
+        <title>Telephone Number</title>
+    </head>
+    <body>
+        <div class="container">
+            <h3>Enter Telephone Number</h3>
+            <input type="text" id="entry">
+        <div>
+            <p>The area code is : </p>
+            <p id="area"> </p>
+            <p>The phone number is : </p>
+            <p id="phone"> </p>
+        </div>
+        <button onclick="find()" id="button">Show</button>
+        </div>
+    </body>
+</html>
