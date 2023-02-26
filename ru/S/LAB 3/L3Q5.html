@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Squares and Cubes</title>
+  <script>
+    function calculate() {
+      var numbers = [];
+      for (var i = 0; i <= 10; i++) {
+        numbers.push(i);
+      }
+      var squares = numbers.map(function(x) {
+        return x * x;
+      });
+
+      var cubes = numbers.map(function(x) {
+        return x * x * x;
+      });
+      var table = "<table border=\"1\" cellspacing=\"0\" width=\"15%\">";
+      table += "<tr><th>Number</th><th>Square</th><th>Cube</th></tr>";
+      for (var i = 0; i < numbers.length; i++) {
+        table += "<tr><td>" + numbers[i] + "</td><td>" + squares[i] + "</td><td>" + cubes[i] + "</td></tr>";
+      }
+      table += "</table>";
+
+      document.getElementById("output").innerHTML = table;
+    }
+  </script>
+</head>
+<body>
+  <h1>Squares and Cubes from 1 to 10</h1>
+  <button onclick="calculate()">Calculate</button>
+  <br>
+  <br>
+  <div id="output"></div>
+</body>
+</html>

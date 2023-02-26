@@ -1,0 +1,43 @@
+<html>
+   <head>
+      <script>
+        function onclickSubmitvar(){
+            document.forms["myForm"]["result"].innerHTML = ""
+            var word =document.forms["myForm"]["word"].value
+            word = word.slice(0,5)
+            console.log(word)
+            for(var i =0;i<3;i++)
+                combination(i,word,"")
+        }
+        function combination(i,bigword,word)
+        {
+            word += bigword[i]
+            if(word.length == 3)
+                permute(word)
+            else{
+                for(var j = i+1;j < 5;j++ )
+                    combination(j,bigword,word)     
+            }
+        }
+        function permute(threeletterword)
+        {
+            var result = document.forms["myForm"]["result"];
+            var temp = threeletterword.concat(threeletterword)
+            console.log(temp)
+            result.innerHTML += `${temp.slice(0,3)} ${temp.slice(1,4)} ${temp.slice(2,5)} `
+        }
+     </script>
+   </head>
+   <body>
+    <h3>Produce 3 Letter Words</h3>
+        <form name="myForm">
+            <input type="text" name="word">
+            <input type="button" name="Submit" value="Submit" onclick="onclickSubmitvar()">
+            <br>
+            <br>
+            <textarea name="result">
+                </textarea>
+                </textarea>
+        </form>
+   </body>
+</html>

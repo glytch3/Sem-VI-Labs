@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <link rel="stylesheet" href="index.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+        body {
+            margin: 100px;
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            width: 300px;
+          }
+          
+        
+          #output {
+            grid-column: 1 / 5;
+            height: 30px;
+            border: 0.1px solid grey;
+            border-radius: 2px;
+          }
+    </style>
+    <title>Calculator</title>
+    <script>
+        var num = "",
+  num1,
+  num2,
+  op;
+n1;
+n2;
+ans;
+function num1() {
+  num = num + "1";
+  document.getElementById("output").textContent = num;
+}
+function num2() {
+  num = num + "2";
+  document.getElementById("output").textContent = num;
+}
+function num3() {
+  num = num + "3";
+  document.getElementById("output").textContent = num;
+}
+function num4() {
+  num = num + "4";
+  document.getElementById("output").textContent = num;
+}
+function num5() {
+  num = num + "5";
+  document.getElementById("output").textContent = num;
+}
+function num6() {
+  num = num + "6";
+  document.getElementById("output").textContent = num;
+}
+function num7() {
+  num = num + "7";
+  document.getElementById("output").textContent = num;
+}
+function num8() {
+  num = num + "8";
+  document.getElementById("output").textContent = num;
+}
+function num9() {
+  num = num + "9";
+  document.getElementById("output").textContent = num;
+}
+function num0() {
+  num = num + "0";
+  document.getElementById("output").textContent = num;
+}
+function dot() {
+  num = num + ".";
+  document.getElementById("output").textContent = num;
+}
+function add() {
+  num1 = num;
+  document.getElementById("output").textContent = "";
+  num = "";
+  op = "+";
+}
+function sub() {
+  num1 = num;
+  document.getElementById("output").textContent = "";
+  num = "";
+  op = "-";
+}
+function mul() {
+  num1 = num;
+  document.getElementById("output").textContent = "";
+  num = "";
+  op = "*";
+}
+function div() {
+  num1 = num;
+  document.getElementById("output").textContent = "";
+  num = "";
+  op = "/";
+}
+function equal() {
+  num2 = num;
+  document.getElementById("output").textContent = "";
+  num = "";
+  n1 = parseFloat(num1);
+  n2 = parseFloat(num2);
+  if (op == "+") {
+    ans = n1 + n2;
+  } else if (op == "-") {
+    ans = n1 - n2;
+  } else if (op == "*") {
+    ans = n1 * n2;
+  } else if (op == "/") {
+    ans = n1 / n2;
+  }
+  
+  document.getElementById("output").textContent = ans.toString();
+}
+    </script>
+  </head>
+  <body>
+    <div id="calci">Calculadora</div>
+    <div id="output"></div>
+    <input type="button" class="button" onclick="num1();" id="1" value="1" />
+    <input type="button" class="button" onclick="num2();" id="2" value="2" />
+    <input type="button" class="button" onclick="num3();" id="3" value="3" />
+    <input type="button" class="button" onclick="add();" id="add" value="+" />
+    <input type="button" class="button" onclick="num4();" id="4" value="4" />
+    <input type="button" class="button" onclick="num5();" id="5" value="5" />
+    <input type="button" class="button" onclick="num6();" id="6" value="6" />
+    <input type="button" class="button" onclick="sub();" id="subtract" value="-" />
+    <input type="button" class="button" onclick="num7();" id="7" value="7" />
+    <input type="button" class="button" onclick="num8();" id="8" value="8" />
+    <input type="button" class="button" onclick="num9();" id="9" value="9" />
+    <input type="button" class="button" onclick="mul();" id="multiply" value="*" />
+    <input type="button" class="button" onclick="dot();" id="dot" value="." />
+    <input type="button" class="button" onclick="num0();" id="0" value="0" />
+    <input type="button" class="button" onclick="equal();" id="equal" value="=" />
+    <input type="button" class="button" onclick="div();" id="divide" value="/" />
+    <input type="button" class="button" onclick="div();" id="reset" value="AC" />  
+
+  </body>
+</html>

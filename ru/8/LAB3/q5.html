@@ -1,0 +1,22 @@
+<html>
+    <head>
+        <title>Tables of Squares and Cubes</title>
+        <script>
+            function generateTable()
+            {
+                var table = document.createElement("table")
+                var colName = `<tr><th>Number</th><th>Squares</th><th>Cubes</th></tr>`
+                table.innerHTML =colName
+                for(var num = 1;num <11;num++)
+                {
+                    var row = `<tr><th>${num}</th><th>${num*num}</th><th>${num*num*num}</th></tr>`
+                    table.innerHTML += row
+                }
+                document.body.appendChild(table); 
+            }
+        </script>
+    </head>
+    <body onload="generateTable()">
+
+    </body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function vowel(){
+            var input=document.getElementById("input").value;
+            for(var i=0; i<input.length; i++){
+                if(input[i]=='a' ||input[i]=='u' ||input[i]=='o' ||input[i]=='i' ||input[i]=='e'){
+                    document.getElementById("output").textContent = (i+1).toString();
+                    break;
+                }
+            }
+        }
+        function rever(){
+            var input=document.getElementById("input").value;
+            var reverse = "";
+            for(i=0;i<txt.length;i++){
+                reverse = txt.charAt(i) + reverse;}
+                document.getElementById("output").textContent = reverse;}
+    </script>
+</head>
+<body>
+    <input type="text" id="input">
+    <br>
+    <button onclick="vowel()"> find vowel</button><br>
+    <button onclick="rever()">reverse</button><br>
+    <div id="output"></div>
+</body>
+</html>

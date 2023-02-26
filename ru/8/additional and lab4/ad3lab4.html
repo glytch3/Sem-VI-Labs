@@ -1,0 +1,33 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Click Elements</title>
+  </head>
+  <body>
+    <img id="image" src="MIT.jpg">
+    <table id="table" border="1">
+      <tr>
+        <td>Click me!</td>
+      </tr>
+    </table>
+
+    <script>
+      
+      const imageElement = document.getElementById('image');
+      imageElement.addEventListener('click', function(event) {
+        alert('You clicked the image.');
+        event.stopPropagation();
+      });
+
+      
+      const tableElement = document.getElementById('table');
+      tableElement.addEventListener('click', function(event) {
+        alert('You clicked the table.');
+        event.stopPropagation();
+      });
+     
+    </script>
+  </body>
+</html>

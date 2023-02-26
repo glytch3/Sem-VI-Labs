@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="text/javascript">
+        function displayf(){
+            var n=parseInt(prompt("Enter the number:"));
+            var fib=[0,1];
+            for(var g=2; g<=n; g++){
+                fib[g]=fib[g-1]+fib[g-2];
+            }
+            alert("The first "+n+" fibonacci number: "+fib.join(", "));
+        }
+        function displaysq(){
+            var n=parseInt(prompt("Enter the number:"));
+            var table="Number\tSquare\n";
+            for(var i=1; i<=n; i++){
+                table+=i+"\t"+(i*i)+"\n";
+            }
+            alert(table);
+        }
+    </script>
+</head>
+<body>
+    <button onclick="displayf()">displayFibonacciNumbers</button><br>
+    <button onclick="displaysq()">displayNumberSquares</button>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>JavaScript Examples</title>
+    <script type="text/javascript">
+      
+      function displayFibonacciNumbers() {
+        var n = parseInt(prompt("Enter a number:"));
+        var fib = [0, 1];
+        for (var i = 2; i < n; i++) {
+          fib[i] = fib[i - 1] + fib[i - 2];
+        }
+        alert("The first " + n + " Fibonacci numbers are:\n" + fib.join(", "));
+      }
+
+      
+      function displayNumberSquares() {
+        var n = parseInt(prompt("Enter a number:"));
+        var table = "Number\tSquare\n";
+        for (var i = 1; i <= n; i++) {
+          table += i + "\t" + (i * i) + "\n";
+        }
+        alert(table);
+      }
+    </script>
+  </head>
+  <body>
+    <h1>JavaScript Examples</h1>
+    <button onclick="displayFibonacciNumbers()">Display Fibonacci Numbers</button>
+    <button onclick="displayNumberSquares()">Display Number Squares</button>
+  </body>
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="index.css" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .AliceBlue {
+        color: AliceBlue;
+        width: 50px;
+      }
+      .Bisque {
+        color: Bisque;
+        width: 50px;
+      }
+      
+      .IndianRed {
+        color: IndianRed;
+        width: 50px;
+      }
+      
+      .MediumAquaMarine {
+        color: MediumAquaMarine;
+        width: 50px;
+      }
+      
+      .Thistle {
+        color: Thistle;
+        width: 50px;
+      }
+    </style>
+    <script>
+      function AliceBlue() {
+        document.getElementById("body").style.backgroundColor = "AliceBlue";
+      }
+      function Bisque() {
+        document.getElementById("body").style.backgroundColor = "Bisque";
+      }
+      function IndianRed() {
+        document.getElementById("body").style.backgroundColor = "IndianRed";
+      }
+      function Thistle() {
+        document.getElementById("body").style.backgroundColor = "Thistle";
+      }
+      function MediumAquaMarine() {
+        document.getElementById("body").style.backgroundColor = "MediumAquaMarine";
+      }
+    </script>
+  </head>
+  <body id="body">
+    <div id="container">
+      <div class="AliceBlue" onmouseover="AliceBlue();">AliceBlue</div>
+      <br>
+      <div class="Bisque" onmouseover="Bisque();">Bisque</div>
+      <br>
+      <div class="IndianRed" onmouseover="IndianRed();">IndianRed</div>
+      <br>
+      <div class="Thistle" onmouseover="Thistle();">Thistle</div>
+      <br>
+      <div class="MediumAquaMarine" onmouseover="MediumAquaMarine();">MediumAquaMarine</div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Guess the Number</title>
+  </head>
+  <body>
+    <h1>Guess a number between 1 and 15</h1>
+    <input type="number" id="guess" min="1" max="15">
+    <button onclick="checkGuess()">Guess</button>
+    <p id="result"></p>
+
+    <script>
+
+      const answer = Math.floor(Math.random() * 15) + 1;
+      
+      function checkGuess() {
+        const guess = document.getElementById('guess').value;
+        
+        if (guess == answer) {
+         
+          document.getElementById('result').innerHTML = "You guessed it!";
+        } 
+        else if (guess < (answer-3)) {
+
+          document.getElementById('result').innerHTML = "Too low! Guess again.";
+        } 
+        else if (guess > (answer+3)) {  
+         document.getElementById('result').innerHTML = "Too high! Guess again.";
+        }
+        else if (guess > (answer-3)&& guess<answer) {
+
+            document.getElementById('result').innerHTML = "Slightly low! Guess again.";
+        } 
+        else if (guess < (answer+3)&& guess >answer) {  
+            document.getElementById('result').innerHTML = "Slightly high! Guess again.";
+        }
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Three-Letter Words Generator</title>
+</head>
+<body>
+	<h1>Three-Letter Words Generator</h1>
+
+	<form>
+		<label for="word">Enter a five-letter word:</label>
+		<input type="text" id="word" name="word" pattern="[a-zA-Z]{5}" required>
+		<button type="button" onclick="generateWords()">Generate</button>
+		<br>
+		<label for="output">Possible Three-Letter Words:</label>
+		<br>
+		<textarea id="output" name="output" rows="10" cols="30" readonly></textarea>
+	</form>
+
+	<script src="./js/Q4.js"></script>
+</body>
+</html>

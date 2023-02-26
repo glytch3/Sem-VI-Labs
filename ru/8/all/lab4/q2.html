@@ -1,0 +1,27 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN""http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd"><html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+         <title>Solver</title>
+         <script>function doOnLoad()
+            {
+                let string = window.prompt("Enter a string","");
+             var result;
+              for(var i=0;i <string.length;i++)
+               {
+                 if(string.charAt(i) == 'a' || string.charAt(i) == 'e' ||string.charAt(i) == 'i' ||string.charAt(i) == 'o' ||string.charAt(i) == 'u' )
+                 {
+                    result = i;
+                     break;
+                    }
+                 }
+                  window.alert(`${i} is the postion of the first vowel`)
+                   doQ2()
+                 }
+                  function doQ2()
+                   {
+                    let integer2 = window.prompt("Enter an integer again",0);
+                     window.alert(`${integer2.split('').reverse().join('')} is the number in reverse `)
+                     }
+                    </script>
+                </head> 
+                <body onload="doOnLoad()"></body>
+                </html> 

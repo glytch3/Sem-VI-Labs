@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Telephone Number</title>
+</head>
+<body>
+	<h1>Telephone Number</h1>
+
+	<form>
+		<label for="phone">Enter a telephone number:</label>
+		<input type="text" id="phone" name="phone" pattern="\(\d{3}\) \d{3}-\d{4}" required>
+		<button type="button" onclick="parsePhone()">Parse</button>
+		<br>
+        <br>
+		<label for="areaCode">Area Code:</label>
+		<input type="text" id="areaCode" name="areaCode" readonly>
+		<br>
+        <br>
+		<label for="phoneNumber">Seven-Digit Phone Number:</label>
+		<input type="text" id="phoneNumber" name="phoneNumber" readonly>
+	</form>
+
+	<script src="./js/Q3.js"></script>
+</body>
+</html>

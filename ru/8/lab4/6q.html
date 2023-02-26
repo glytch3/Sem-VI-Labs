@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .Red {
+        color: red;
+        width: 50px;
+      }
+      .Yellow {
+        color: Yellow;
+        width: 50px;
+      }
+      
+      .Blue {
+        color: Blue;
+        width: 50px;
+      }
+      
+      .Orange {
+        color: Orange;
+        width: 50px;
+      }
+      
+      .Green {
+        color: Green;
+        width: 50px;
+      }
+    </style>
+    <script>
+      function red() {
+        document.getElementById("body").style.backgroundColor = "red";
+      }
+      function Yellow() {
+        document.getElementById("body").style.backgroundColor = "Yellow";
+      }
+      function Blue() {
+        document.getElementById("body").style.backgroundColor = "Blue";
+      }
+      function Green() {
+        document.getElementById("body").style.backgroundColor = "Green";
+      }
+      function Orange() {
+        document.getElementById("body").style.backgroundColor = "Orange";
+      }
+    </script>
+  </head>
+  <body id="body">
+    <div class="Red" onmouseover="red();">Red</div>
+    <br>
+    <div class="Yellow" onmouseover="Yellow();">Yellow</div>
+    <br>
+    <div class="Blue" onmouseover="Blue();">Blue</div>
+    <br>
+    <div class="Green" onmouseover="Green();">Green</div>
+    <br>
+    <div class="Orange" onmouseover="Orange();">Orange</div>
+    <br>
+  </body>
+</html>

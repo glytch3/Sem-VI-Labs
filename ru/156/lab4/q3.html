@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Paragraph Stacking</title>
+	<style>
+		#container {
+			position: relative;
+			height: 300px;
+			width: 400px;
+			border: 1px solid black;
+		}
+
+		.paragraph {
+			position: absolute;
+			height: 80px;
+			width: 100%;
+			background-color: lightgray;
+			overflow: hidden;
+			cursor: pointer;
+			transition: all 0.5s ease-in-out;
+		}
+
+		.paragraph:hover {
+			z-index: 1;
+			height: 100%;
+		}
+	</style>
+</head>
+<body>
+	<div id="container">
+		<div class="paragraph">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam feugiat mauris sed augue feugiat tincidunt. Nullam euismod pharetra lectus vitae vulputate. Fusce eget nisl id ante tincidunt gravida nec vel mi. Fusce sed lectus malesuada, vulputate magna vel, gravida sapien. Donec non sapien sit amet nibh sodales efficitur at id turpis. Quisque quis lacinia justo.</div>
+		<div class="paragraph" style="top: 120px;">Integer malesuada dolor nec massa luctus, ac convallis mauris mollis. Donec sagittis enim vel mauris auctor tincidunt. Curabitur vel ultricies purus, sit amet suscipit lorem. Sed malesuada ullamcorper lacus, in tincidunt dolor malesuada at. Vivamus consequat augue sit amet libero commodo vestibulum. Nam aliquet ligula quis consequat hendrerit. Donec id mauris non libero malesuada maximus.</div>
+		<div class="paragraph" style="top: 240px;">Suspendisse at nunc quis mi molestie viverra. Sed semper, quam vitae blandit convallis, est nulla tincidunt turpis, eget rhoncus ex ante vel sem. Nulla eget bibendum velit, ac dapibus odio. Praesent ullamcorper, lorem ac lobortis lacinia, sapien justo efficitur arcu, ut hendrerit eros ex id ipsum. Integer cursus nisl non erat bibendum, ut iaculis ante commodo. Nullam euismod mi sit amet turpis placerat feugiat. Ut auctor sapien nec libero eleifend, at feugiat orci lobortis.</div>
+	</div>
+
+	<script>
+		const paragraphs = document.querySelectorAll('.paragraph');
+
+		paragraphs.forEach((paragraph) => {
+			paragraph.addEventListener('click', () => {
+				paragraphs.forEach((p) => {
+					if (p.style.zIndex > paragraph.style.zIndex) {
+						p.style.top = parseInt(p.style.top) + 80 + 'px';
+						p.style.zIndex -= 1;
+					}
+				});
+
+				paragraph.style.zIndex = paragraphs.length;
+				paragraph.style.top = '0';
+			});
+		});
+	</script>
+</body>
+</html>

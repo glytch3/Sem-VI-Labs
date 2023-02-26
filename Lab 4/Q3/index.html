@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="index.css" />
+    <script >
+        var oldValue;
+function bringToTop(element) {
+  oldValue = element.style.zIndex;
+  element.style.zIndex = 3;
+}
+
+function resetPosition(element) {
+  element.style.zIndex = oldValue;
+}
+
+    </script>
+    <title>Stacking</title>
+  </head>
+  <body  style="background-color:powderblue;">
+    <div>
+      <p
+        id="c1"
+        class="box box1"
+        onmouseover="bringToTop(this);"
+        onmouseout="resetPosition(this)"
+      >
+      “If you don’t take risks, you can’t create a future!” – Monkey D. Luffy
+      </p>
+      <p
+        id="c2"
+        class="box box2"
+        onmouseover="bringToTop(this);"
+        onmouseout="resetPosition(this)"
+      >
+      “I’ll leave tomorrow’s problems to tomorrow’s me.” – Saitama   
+      </p>
+      <p
+        id="c3"
+        class="box box3"
+        onmouseover="bringToTop(this);"
+        onmouseout="resetPosition(this)"
+      >
+      “Reject common sense to make the impossible possible.” – Simon   
+      </p>
+    </div>
+  </body>
+</html>

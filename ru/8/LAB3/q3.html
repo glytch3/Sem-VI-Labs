@@ -1,0 +1,23 @@
+<html>
+    <head>
+        <script>
+            
+            function submitClick()
+            {
+                var forms = document.forms
+                var tel = forms["q3"]["telIn"].value                   
+                console.log(tel.split(')',1)[0].slice(1,4));
+                document.getElementById("AreaCode").innerHTML += tel.split(')',1)[0].slice(1,4)+" ";
+                document.getElementById("pnum").innerHTML += tel.split(')')[1]+" ";
+            }
+        </script>
+    </head>
+    <body>
+        <form name="q3">
+            <input type="tel" name="telIn">
+            <input type="button" name="submit" onclick="submitClick()" value="Submit">
+            <p name="AreaCode" id="AreaCode"></p> <br>
+            <p name="Phone number" id="pnum"></p>
+        </form>
+    </body>
+</html>
