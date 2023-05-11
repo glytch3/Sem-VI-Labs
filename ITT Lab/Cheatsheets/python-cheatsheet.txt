@@ -1,0 +1,206 @@
+ARITHMETIC
+c //= a <----------------Get Quotient
+round(x [,n])
+
+c = a & b
+c=a | b
+c=a ^ b
+c = ~a
+c=a<<2
+c=a>>2
+
+LIST
+a = []
+a.append(str(b))
+a.reverse()  <----------------Reverse Array Elements
+my_list.insert(pos, 4)<----------------
+my_list.remove(num)<----------------
+my_list.pop(pos)<----------------
+
+list1 = [1, 2, 3]
+list2 = [4, 5, 6]
+joined_list = list1 + list2	
+
+list.count(obj)	<---------------- Returns count of how many times obj occurs in list
+list.index(obj) <---------------- Returns the lowest index in list that obj appears
+
+my_list.sort()
+my_list.sort(reverse=True)
+print(my_list)
+
+
+2D LIST
+my_2d_list = []
+new_row = [1, 2, 3]
+my_2d_list.append(new_row)
+my_2d_list.pop(listpos)
+
+matrix = [[1, 2, 3],
+          [4, 5, 6],
+          [7, 8, 9]]
+          
+rows = len(matrix)
+cols = len(matrix[0])
+transposed = [[0 for j in range(rows)] for i in range(cols)]
+def print_matrix(matrix):
+    for row in matrix:
+        print(row)	
+
+arr = [[3, 'cat'], [1, 'dog'], [2, 'elephant']]
+sorted_arr = sorted(arr, key=lambda x: x[1])
+print(sorted_arr)
+
+
+INPUT
+m = int(input("Enter the value of m: "))
+
+SET
+set_a = {1, 2, 3, 4, 5}
+set_b = {4, 5, 6, 7, 8}
+union = set_a.union(set_b)
+my_list = list(set_a)
+
+
+PRINT
+print(”number is {}”.format(a))
+print(a,"plus",b,"=", add(a,b))
+print("First Name:\tJohn")
+print("First Name: John\nLast Name: Smith")
+
+
+STRING
+ord('a')
+chr(56)
+
+reversed_string = string[::-1]<----------------
+capitalized_string = my_string.capitalize()
+titlecased_string = my_string.title()
+decapitalized_string = string.lower()
+
+for char in string:
+    print(char)
+
+num_str = str(num)
+
+substring = string[0:5]
+
+original_string = "The cat chased the bat."
+new_string = original_string.replace("bat", "ball")
+print(new_string)
+
+
+
+FUNCTION
+def is_prime(num):
+    if num <= 1:
+        return False
+    for i in range(2, int(num**(0.5))+1):<----------------
+        if num % i == 0:
+            return False
+    return True
+
+
+WHILE
+while left < right:
+        if lst[left] != lst[right]:
+            return False
+        left += 1
+        right -= 1
+
+
+IF ELSE
+if x < 5:
+    print("")
+elif x < 10:
+    print("")
+else:
+    print("")
+
+if m in n:
+	print("")
+if m not in n:
+	print("")
+
+
+BREAK/CONTINUE
+break
+continue
+
+
+
+
+LOOP
+my_list = ["apple", "banana", "cherry"]
+for fruit in my_list:<----------------
+    print(fruit)
+
+for num in range(m, n+1):
+     if is_prime(num):
+          print(num)
+
+for i in range(10):
+    if i == 5:
+        break
+
+for i in range(0, 10, 2):
+    print(i)
+
+
+REGEX
+import re
+pattern = r'^\d{10}$'<----------------
+return bool(re.match(pattern, phone_number))
+
+pattern = r"apple"
+pattern = r"a.b"<----------------
+pattern = r"[a-z][A-Z]"
+pattern = r"a+"
+pattern = r"colou?r"<----------------
+pattern = r'^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$'<----------------
+pattern = r'^\d{10}$'
+pattern = r'^.{10}$'
+match = re.search(pattern, text)<----------------
+print(bool(match))  <----------------
+
+^ Matches the start of a string.
+$ Matches the end of a string.
+. Matches any character except newline.
+* Matches zero or more occurrences of the previous character.
++ Matches one or more occurrences of the previous character.
+? Matches zero or one occurrence of the previous character.
+{n} Matches exactly n occurrences of the previous character.
+{n,} Matches n or more occurrences of the previous character.
+{n,m} Matches at least n and at most m occurrences of the previous character.
+[] Matches any one of the enclosed characters.
+| Matches either the expression before or after the operator.
+\ Escapes special characters like ., *, and ?.
+
+
+FILE
+fo = open("foo.txt", "wb")
+fo.write( "Python is a great language.\nYeah its great!!\n")
+fo.close()
+
+
+fo = open("foo.txt", "r+")
+str = fo.read(10) <-------- fo.read()
+print "Read String is : ", str
+fo.close()
+
+
+fo = open("fo.txt", "wb")
+of = open("of.txt", "r+")
+lines = fo.readlines()
+print(lines)
+newlines=[]
+for line in lines:
+	stripped_line = line.rstrip('\n')
+	newlines = newlines.append(stripped_line)
+	of.write(stripped_line + '\n')
+print(newlines)
+
+DO FILE READ WRITE ONCE
+
+
+
+

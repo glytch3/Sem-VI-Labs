@@ -1,0 +1,13 @@
+<head>
+    <script src="path/to/script.js"></script>
+    <link rel="stylesheet" href="path/to/styles.css">
+</head>
+
+
+<p id="text" style="color:red">TEXT GROWING</p>
+
+.CLASS
+#ID
+BODY {
+}
+

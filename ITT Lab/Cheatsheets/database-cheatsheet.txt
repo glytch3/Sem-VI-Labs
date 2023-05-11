@@ -1,0 +1,76 @@
+CREATE
+import sqlite3
+conn=sqlite3.connect('student.db')
+conn.execute("CREATE TABLE IF NOT EXISTS bank_customer (acc_no INT, name VARCHAR(255), balance float)")
+
+
+INSERT
+bankdetail = [
+  (1001001, "Vidushi" ,1002.56 ),
+  (1001002,  "Shreeyanka",50000.2),
+  (1001003, "Ravi", 256.35),
+  (1001004, "Hardik",100000.0),
+  (1001005, "Avika",99956.56)
+]
+conn.executemany("INSERT INTO bank_customer VALUES (?,?, ?)", bankdetail)
+conn.commit()
+
+
+
+SELECT
+c = conn.execute('SELECT * FROM customer')
+customers = c.fetchall()<----------------
+for customer in customers:
+    customer_id = customer[0]
+    name = customer[1]
+    phone_number = str(customer[2])
+    email = customer[3]
+
+
+DELETE
+DELETE FROM students WHERE name = 'chatgpt';
+
+ALTER
+ALTER TABLE students ADD COLUMN age INTEGER;
+
+
+UPDATE
+conn.execute("UPDATE COMPANY set SALARY = 25000.00 where ID=1")
+
+
+JOIN
+SELECT * FROM table1 JOIN table2 ON table1.common_column = table2.common_column;
+
+
+GROUPBY
+SELECT region, SUM(sales_amount) as total_sales
+FROM sales
+GROUP BY region;
+
+
+FIND MAX
+SELECT MAX(column_name) FROM table_name;
+
+
+PRIMARY KEY
+CREATE TABLE table_name (column1 datatype PRIMARY KEY, column2 datatype, ...);
+
+NOT NULL
+CREATE TABLE table_name (column1 datatype NOT NULL, column2 datatype, ...);
+
+
+WHERE
+c = conn.execute('UPDATE student_records SET CGPA = ? WHERE student_id = ?', (new_cgpa, student_id))
+
+COMPLEX
+SELECT c.customer_name, c.customer_email, SUM(o.order_total) AS total_orders
+FROM orders AS o
+JOIN customers AS c ON o.customer_id = c.customer_id
+WHERE o.order_date >= DATE('now', '-1 month')
+GROUP BY c.customer_id;
+
+ROLLBACK
+conn.rollback()
+
+END
+conn.close()

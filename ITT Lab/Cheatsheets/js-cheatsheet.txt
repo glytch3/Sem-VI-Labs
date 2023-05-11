@@ -1,0 +1,267 @@
+<head>
+    <script src="path/to/script.js"></script>
+    <link rel="stylesheet" href="path/to/styles.css">
+</head>
+
+STRING
+var str = "HELLO WORLD";
+str.charAt(0);
+var ascii=str.charCodeAt(0);  <------------
+var num=str.lenght();
+
+text3 = text1.concat("text 2",text3);
+var pos = str.indexOf("locate");   <------------
+var pos = str.lastIndexOf("locate");
+str.replace("Microsoft","W3Schools");
+let newString = originalString.replace(/i/g, "o");   <------------
+var res = str.substr(1, 4);
+var res = str.split(" ");  <------------
+var text2 = text1.toLowerCase();
+
+const str = "42";
+const num = parseInt(str);
+console.log(num); // Output: 42
+
+
+INT
+const num = 123;
+const str = num.toString();
+console.log(typeof str); // Output: "string"  <------------
+
+const floatNum = 3.7;
+const intNum = Math.round(floatNum);  <------------
+console.log(intNum); // Output: 4
+
+var n = num.toPrecision(2); //all
+var n = num.toFixed(2); //decimal    <------------
+var n = num.toExponential(2); // Output: "1.23e+4"
+
+ARRAY
+var array1 = ["Emil", "Tobias", "Linus"];
+var children = array1.concat(array2);
+var a = fruits.indexOf("Apple");
+var a = fruits.lastIndexOf("Orange");
+var num=array1.length; <------------
+
+var fruits = ["apple", "banana", "cherry"];
+var result = fruits.join(", "); <------------
+console.log(result); // Output: "apple, banana, cherry"
+
+var fruits=[];
+fruits.push("Kiwi");
+fruits.pop();
+fruits.reverse();
+myArray.shift(); <------ remove first element
+var citrus = fruits.slice(1, 3);  
+fruits.sort();
+
+// Add two elements starting at index 1
+fruits.splice(1, 0, "orange", "grape"); <------
+// Remove one element starting at index 2
+var removed = fruits.splice(2, 1);
+
+
+PRINT
+console.log(str);
+console.log("The sum of", a, "and", b, "is", sum);
+console.log(`${x} is greater than ${y}`);
+
+IF ELSE
+if (x > y) {
+  console.log(`${x} is greater than ${y}`);
+} else if (x < y) {
+  console.log(`${x} is less than ${y}`);
+} else {
+  console.log(`${x} is equal to ${y}`);
+}
+
+FOR
+for (var i = 1; i <= 5; i++) {
+  console.log(i);
+}
+
+WHILE
+while (condition) {
+  // Code to be executed
+}
+
+BREAK/CONTINUE
+break;
+continue;
+
+
+READ/WRITE
+document.getElementById("display").innerHTML;
+document.getElementById("display").textContent;
+let entered = document.getElementById("entry").value; <----Entered value
+
+document.write("</table>") //new page and only what u put, multiple document.write can be done though
+
+
+ALERT
+alert("Hello! I am an alert box!!");
+alert(location.hostname);
+
+PROMPT
+let string = window.prompt("Enter ur Name","Afnan");
+var n=parseInt(prompt("Enter the number :"));
+
+
+FUNCTION
+setInterval(handleText,100)
+function handleText()
+{
+    var text = document.getElementById("text")
+    if(size >= 50 || size <= 5)
+    {
+        if(increasing)
+        {
+            increasing = false
+            document.getElementById("text").style.color = "blue";
+            text.innerHTML = "TEXT SHRINKING"
+        }
+        else
+        {
+            increasing = true
+            document.getElementById("text").style.color = "blue";
+            text.innerHTML = "TEXT GROWING"
+        }
+            
+    }
+    if(increasing)
+        size+=1;
+    else
+        size-=1;
+    
+    text.style.fontSize = size; 
+}
+
+
+SITUATION
+<body onload="myFunction()">
+<body onunload="myFunction()">
+<input type="text" value="10" onchange="valid(this.value)">
+<form name="myform" onsubmit="alert('tha nk you ' + myform.data.value +'!')"> //data is 'name' of input type
+<form onreset="alert('this will reset the form!')">
+<input type="text" value="select this" onselect="alert('this is an example of onselect!!')">
+<input type="text" onfocus='alert("you focused in the textbox!!")'>
+<input type="text" id="fname" onblur="myFunction()">
+
+
+
+
+DYNAMIC TABLE
+<table id="myTable">
+  <thead>
+    <tr>
+      <th>Column 1</th>
+      <th>Column 2</th>
+      <!-- Add more table headers if needed -->
+    </tr>
+  </thead>
+  <tbody>
+    <!-- Rows will be dynamically added here -->
+  </tbody>
+</table>
+
+DYNAMIC TABLE
+var tableBody = document.querySelector("#myTable tbody");
+var newRow = document.createElement("tr");
+var cell1 = document.createElement("td");
+cell1.textContent = "Value 1";
+newRow.appendChild(cell1);
+var cell2 = document.createElement("td");
+cell2.textContent = "Value 2";
+newRow.appendChild(cell2);
+tableBody.appendChild(newRow);
+
+DYNAMIC
+const ul = document.getElementById("ul") //ul already in HTML
+const li = document.createElement("li") //new li element created virtually
+li.textContent = myLeads[i] //virtual element given value
+ul.append(li) //append the new element with its value
+
+HACKS
+const div = document.getElementById("div")
+div.innerHTML += "<button>Buy!</button>"
+
+
+REGEX
+var usn = document.getElementById("usn").value;
+            var check = /[1-4]{1}[A-Z]{2}[0-9]{2}[A-Z]{2}[0-9]{3}/;   <--------
+            console.log("Checking USN");
+            var res = check.test(usn);
+            if (!res) {
+              alert("Invalid USN");
+              return;
+            } 
+
+MOUSE
+<button onclick="myFunction()">Click me</button>
+<p ondblclick="myFunction()">Double- click this paragraph to trigger a function.</p>
+
+<div onmousemove="myFunction(event)" onmouseout="clearCoor()"></div>  <--------
+function myFunction(e) {  <--------
+var x = e.clientX; <--------
+var y = e.clientY; <--------
+var coor = "Coordinates: (" + x + "," + y + ")";
+}
+
+<div class="AliceBlue" onmouseover="AliceBlue();">AliceBlue</div>
+document.getElementById("body").style.backgroundColor = "AliceBlue";
+
+<img onmouseover="bigImg(this)" onmouseout="normalImg(this)" border="0" src="smiley.gif" alt="Smiley" width="32" height="32">  <--------
+function bigImg(x) { 
+x.style.height = "64px";
+x.style.width = "64px"; }
+function normalImg(x) { 
+x.style.height = "32px";
+x.style.width = "32px"; }
+
+<p id="myP" onmousedown="mouseDown()" onmouseup="mouseUp()"> <--------
+
+ZAXIS
+<p
+        id="c1"
+        class="box box1"
+        onmouseover="bringToTop(this);"
+        onmouseout="resetPosition(this)"
+      >
+      “If you don’t take risks, you can’t create a future!” – Monkey D. Luffy
+      </p>
+
+function bringToTop(element) {
+  oldValue = element.style.zIndex;
+  element.style.zIndex = 3;
+}
+
+function resetPosition(element) {
+  element.style.zIndex = oldValue;
+}
+
+.box {
+    height: 400px;
+    width: 400px;
+  
+    color: white;
+    text-align: center;
+    font-family: sans-serif;
+    font-size: 10px;
+    line-height: 400px;
+  
+    position: absolute;
+    margin: auto;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+  }
+  
+  .box1 {
+    background: linear-gradient(white,blue);
+    left: 60px;
+    bottom: 60px;
+    z-index: 1;
+    border-radius: 10px;
+  }
+
